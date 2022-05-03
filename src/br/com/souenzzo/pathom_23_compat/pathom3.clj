@@ -1,6 +1,12 @@
 (ns br.com.souenzzo.pathom-23-compat.pathom3
   (:require [com.wsscode.pathom3.connect.operation :as pco]))
 
+
+;; TODO:
+#_[{:com.wsscode.pathom.connect/indexes [:com.wsscode.pathom.connect/idents
+                                         :com.wsscode.pathom.connect/index-io
+                                         :com.wsscode.pathom.connect/autocomplete-ignore]}]
+
 (pco/defresolver index-explorer-index [{:com.wsscode.pathom3.connect.indexes/keys [index-resolvers index-mutations index-attributes]} {}]
   {::pco/input  [:com.wsscode.pathom.viz.index-explorer/id]
    ::pco/output [:com.wsscode.pathom.viz.index-explorer/index]}
